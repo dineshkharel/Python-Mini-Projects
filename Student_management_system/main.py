@@ -1,4 +1,4 @@
-import functions
+import functions,msvcrt
 class StudentManagementSystem:
     def main(self):
         print("Welcome to the SStudent Management System")
@@ -31,3 +31,5 @@ sms = StudentManagementSystem()
 if __name__=="__main__": #only runs in this file
 
     sms.main()
+
+msvcrt.getch()
