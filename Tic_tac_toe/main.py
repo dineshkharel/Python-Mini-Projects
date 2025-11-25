@@ -1,4 +1,4 @@
-import random
+import random,msvcrt
 import board
 import winlogic
 print("Welcome to the tic_tac_toe:")
@@ -59,4 +59,5 @@ while len(marked) !=9:
     if winner:
         print(f"{winner} won the game")
         break
-    
+
+msvcrt.getch()
