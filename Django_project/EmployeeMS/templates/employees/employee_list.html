@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee </title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h1 style="text-align:center;" >Employee Details</h1>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+<tbody>
+    {% for e in employees %}
+    <tr>
+        <td>{{e.full_name}}</td>
+        <td>{{e.email}}</td>
+        <td>{{e.age}}</td>
+        <td>{{e.salary}}</td>  
+        <td>
+            <a href="{% url 'delete_employee' e.id %}" class="btn btn-danger">Delete Details</a>
+            <a href="{% url 'update_employee' e.id %}" class ="btn btn-warning"">Update Details</a>
+        </td>
+    </tr>
+    {% endfor %}
+</tbody>
+        
+</table>
+
+<a href="{% url 'add_employee' %}" class="btn btn-primary">Add Employee</a>
+
+
+    
+</body>
+</html>

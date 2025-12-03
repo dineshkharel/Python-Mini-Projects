@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update_employee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <h2 style="text-align: center;">Update employee details</h2>
+    <div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+        Name: 
+        <input type="text" name="full_name" value="{{employee.full_name}}" class="form-control" required>
+        <br>
+        Email: 
+        <input type="email" name="email" value="{{employee.email}}" class="form-control" required>
+        <br>
+        Age: 
+        <input type="number" name="age" value="{{employee.age}}" class="form-control" required>
+        <br>
+        Salary: 
+        <input type="number" name="salary" value="{{employee.salary}}" class="form-control" required>
+        <br>
+        </fieldset>
+
+        <button type="submit" class=" btn btn-success">Update</button>
+    </form>
+    </div>
+    
+</body>
+</html>
