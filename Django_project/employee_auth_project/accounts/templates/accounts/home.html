@@ -1,0 +1,10 @@
+<h1>Welcome, {{ user.full_name }}!</h1>
+<p>Email: {{ user.email }}</p>
+
+{% if user.is_superuser %}
+<p>You are an Admin</p>
+{% else %}
+<p>You are an Employee</p>
+{% endif %}
+
+<a href="{% url 'logout' %}">Logout</a>
